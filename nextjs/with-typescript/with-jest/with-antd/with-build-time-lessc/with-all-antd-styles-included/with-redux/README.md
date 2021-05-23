@@ -1,8 +1,11 @@
 - nextjs
 - TypeScript
+- jest (ts-jest)
+- react testing library
 - antd
 - antd styles are compiled at build time
 - styles of all antd components imported regardless if they are used or not
+- redux
 
 Future: Purge unused CSS
 1. https://nextjs.org/docs/advanced-features/customizing-postcss-config

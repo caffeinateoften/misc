@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { fetchCount } from './counterAPI';
+import { fetchCount } from './counter-api';
 
 import { useAppDispatch } from '../../hooks'
 
