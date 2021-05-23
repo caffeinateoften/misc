@@ -25,6 +25,9 @@ export default function Home() {
             <Col span={12}>
               <Button type='primary'>Example antd button</Button>
             </Col>
+            <Col>
+              <Counter />
+            </Col>
           </Row>
         </p>
 
