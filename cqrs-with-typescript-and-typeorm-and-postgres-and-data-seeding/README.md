@@ -26,9 +26,9 @@ On the DATABASE stuff:
 - Further architecting would be needed so that guardrails were in place in Production so a dev does not accidentally drop production database tables, but a "tell-dont-ask" model of table schema changes from a app feature developer perspective is a reasonable ask from an SDLC perspective
 
 On general gaps or future improvements:
-- One improvement would be to have better global error handling middleware setup for KOA. None is set up here, but creating an ErrorHandler middleware to handle 5xx vs 4xx statuses and error messages would be ideal.
+- One improvement would be to have better global error handling middleware setup for KOA. Creating a single ErrorHandler middleware to catch and handle 5xx vs 4xx statuses and error messages would be ideal.
 - Instead of hardcoding the command names (e.g. "POSTCommand"), those should be imported via an enum
-- This is just a sandbox repo so no test suites were set up, but tests belong here
+- This is just a sandbox repo so no test suites were set up, but tests obvi TDD and tests would be good for any serious project
 - It would be cool to look into Event Sourcing to see how that would work with CQRS
 - The patterns used are all via convention, which would make maintenance error prone by new developers. Enforcing convention and constraints with lint rules would put up some guard rails for new devs maintaining a codebase with this structure so that it'd be harder for them to make mistakes
 
