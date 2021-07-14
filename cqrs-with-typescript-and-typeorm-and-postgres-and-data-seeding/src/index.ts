@@ -1,10 +1,10 @@
 import { startKoaHttpServer } from './infrastructure/http-server/koa';
 export { RouteHandler } from './infrastructure/http-server/koa';
 
-import { createPostgresConnectionWithProjectConfig } from './infrastructure/database/typeorm-postgres';
+import { createPostgresConnection } from './infrastructure/database/typeorm-postgres';
 
 async function main() {
-    await createPostgresConnectionWithProjectConfig();
+    await createPostgresConnection();
     startKoaHttpServer();
 }
 

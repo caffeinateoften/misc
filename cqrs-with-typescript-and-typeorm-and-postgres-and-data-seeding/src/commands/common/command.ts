@@ -1,6 +1,6 @@
 
 import { CommandResponse } from './command-response'
 
-export default interface Command {
-    execute: () => CommandResponse
+export interface Command {
+    execute: () => Promise<CommandResponse>
 }

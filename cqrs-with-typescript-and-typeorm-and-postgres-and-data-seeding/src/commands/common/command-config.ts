@@ -1,4 +1,4 @@
-export default interface CommandConfig {
+export interface CommandConfig {
     commandName: string
     args: any
 }

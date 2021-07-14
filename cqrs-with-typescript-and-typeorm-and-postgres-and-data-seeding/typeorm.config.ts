@@ -6,14 +6,14 @@ const defaultConfig = {
   type: 'postgres',
   host: 'localhost',
   port: 5001,
-  synchronize: true,
-  entities: ['src/**/*.entity{.ts,.js}'],
-  migrations: ['src/infrastructure/database/migration/*.ts'],
+  synchronize: false,
+  entities: ['./dist/commands/**/*.entity{.ts,.js}'],
+  migrations: ['./dist/infrastructure/database/migration/*.ts'],
   cli: {
-    migrationsDir: 'src/infrastructure/database/migration'
+    migrationsDir: './dist/infrastructure/database/migration'
   },
-  seeds: ['src/infrastructure/database/seeds/**/*{.ts,.js}'],
-  factories: ['src/infrastructure/database/factories/**/*{.ts,.js}'],
+  seeds: ['./dist/infrastructure/database/seeds/**/*{.ts,.js}'],
+  factories: ['./dist/infrastructure/database/factories/**/*{.ts,.js}'],
 };
 
 const development = {

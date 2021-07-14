@@ -18,5 +18,4 @@ export class personHasAliases1626222543098 implements MigrationInterface {
         await queryRunner.query(`ALTER TABLE "person" ADD CONSTRAINT "PK_5fdaf670315c4b7e70cce85daa3" PRIMARY KEY ("id")`);
         await queryRunner.query(`ALTER TABLE "person" DROP COLUMN "aliases"`);
     }
-
 }

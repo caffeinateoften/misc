@@ -30,7 +30,6 @@ export default function Home() {
             </Col>
           </Row>
         </p>
-
       </main>
 
       <footer className={styles.footer}>

@@ -2,21 +2,21 @@
   "type": "postgres",
   "host": "localhost",
   "port": 5001,
-  "synchronize": true,
+  "synchronize": false,
   "entities": [
-    "src/**/*.entity{.ts,.js}"
+    "./dist/commands/**/*.entity{.ts,.js}"
   ],
   "migrations": [
-    "src/infrastructure/database/migration/*.ts"
+    "./dist/infrastructure/database/migration/*.ts"
   ],
   "cli": {
-    "migrationsDir": "src/infrastructure/database/migration"
+    "migrationsDir": "./dist/infrastructure/database/migration"
   },
   "seeds": [
-    "src/infrastructure/database/seeds/**/*{.ts,.js}"
+    "./dist/infrastructure/database/seeds/**/*{.ts,.js}"
   ],
   "factories": [
-    "src/infrastructure/database/factories/**/*{.ts,.js}"
+    "./dist/infrastructure/database/factories/**/*{.ts,.js}"
   ],
   "username": "postgres",
   "password": "password",
