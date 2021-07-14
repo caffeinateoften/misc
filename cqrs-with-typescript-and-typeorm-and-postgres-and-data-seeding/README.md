@@ -1,0 +1,6 @@
+- CQRS
+- TypeScript
+- Postgres
+- TypeORM with pg driver
+- Creates DB if it does not exist
+- Will seed data in development environments (based off of NODE_ENV)

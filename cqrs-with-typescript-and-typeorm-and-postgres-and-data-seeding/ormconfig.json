@@ -1,0 +1,24 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5001,
+  "synchronize": true,
+  "entities": [
+    "src/**/*.entity{.ts,.js}"
+  ],
+  "migrations": [
+    "src/infrastructure/database/migration/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "src/infrastructure/database/migration"
+  },
+  "seeds": [
+    "src/infrastructure/database/seeds/**/*{.ts,.js}"
+  ],
+  "factories": [
+    "src/infrastructure/database/factories/**/*{.ts,.js}"
+  ],
+  "username": "postgres",
+  "password": "password",
+  "database": "phonebook_development"
+}
