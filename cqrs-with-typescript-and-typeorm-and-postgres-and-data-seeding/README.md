@@ -23,7 +23,7 @@ On the CQRS stuff:
 On the DATABASE stuff:
 - This demonstrates that it is perfectly reasonable to generate and seed test data in non-production environments.
 - This also shows that an app developer can rapidly evolve their application with the help of automatic schema table generation.
-- Further architecting would be needed so that guardrails were in place in Production so a dev does not accidentally drop production database tables, but a "tell-dont-ask" model of table schema changes from a app feature developer perspective is a reasonable ask from an SDLC perspective
+- Further architecting would be needed so that guardrails were in place in Production so a dev does not accidentally drop production database tables, but a "tell-dont-ask" model of table schema changes reasonable ask from an App Feature Developer SDLC perspective
 
 On general gaps or future improvements:
 - One improvement would be to have better global error handling middleware setup for KOA. Creating a single ErrorHandler middleware to catch and handle 5xx vs 4xx statuses and error messages would be ideal.
