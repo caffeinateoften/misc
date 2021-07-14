@@ -31,5 +31,7 @@ On general gaps or future improvements:
 - This is just a sandbox repo so no test suites were set up, but tests obvi TDD and tests would be good for any serious project
 - It would be cool to look into Event Sourcing to see how that would work with CQRS
 - The patterns used are all via convention, which would make maintenance error prone by new developers. Enforcing convention and constraints with lint rules would put up some guard rails for new devs maintaining a codebase with this structure so that it'd be harder for them to make mistakes
+- I kind of want to see what this pattern looks like in a language like `Go` and or `gRPC`
+
 
 
