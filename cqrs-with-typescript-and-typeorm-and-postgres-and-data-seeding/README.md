@@ -14,3 +14,22 @@ TypeORM
 - Table schema migration generation based off of entity class definition
 - Creates DB if it does not exist
 - Will seed data in development environments (based off of NODE_ENV)
+
+# Reflections
+On the CQRS stuff:
+- This really just demonstrates a single "write" command and a separation between infra, application, and domain layers
+- The "read" service, when created, would be its own repo or just some independently deployable service, which would complete this "command" / "query" response segregation (I imagine a GRAPHQL service that does nothing but read/resolve data fields would be a nice way to handle the read-only service...)
+
+On the DATABASE stuff:
+- This demonstrates that it is perfectly reasonable to generate and seed test data in non-production environments.
+- This also shows that an app developer can rapidly evolve their application with the help of automatic schema table generation.
+- Further architecting would be needed so that guardrails were in place in Production so a dev does not accidentally drop production database tables, but a "tell-dont-ask" model of table schema changes from a app feature developer perspective is a reasonable ask from an SDLC perspective
+
+On general gaps or future improvements:
+- One improvement would be to have better global error handling middleware setup for KOA. None is set up here, but creating an ErrorHandler middleware to handle 5xx vs 4xx statuses and error messages would be ideal.
+- Instead of hardcoding the command names (e.g. "POSTCommand"), those should be imported via an enum
+- This is just a sandbox repo so no test suites were set up, but tests belong here
+- It would be cool to look into Event Sourcing to see how that would work with CQRS
+- The patterns used are all via convention, which would make maintenance error prone by new developers. Enforcing convention and constraints with lint rules would put up some guard rails for new devs maintaining a codebase with this structure so that it'd be harder for them to make mistakes
+
+
